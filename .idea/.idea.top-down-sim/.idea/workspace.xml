@@ -29,6 +29,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/af218701fe324032b521ddd91f13662b13b600/a9/74ea5298/Color.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Opsive/UltimateInventorySystem/Scripts/UI/Currency/CurrencyView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@5.0.7/Editor/SpriteSkin/BoneGizmo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1ynfkvbXbdxjQnEw6gh06OiXwXs" />

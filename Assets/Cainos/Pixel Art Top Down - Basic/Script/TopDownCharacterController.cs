@@ -54,6 +54,16 @@ namespace Cainos.PixelArtTopDown_Basic
             {
                GameManager.Instance.chestPopup.SetActive(true);
             }
+            
+            if (other.collider.CompareTag("Shop"))
+            {
+                GameManager.Instance.BuyPanel.SetActive(true);
+            }
+            
+            if (other.collider.CompareTag("Sell"))
+            {
+                GameManager.Instance.Sellpanel.SetActive(true);
+            }
         }
     }
 }

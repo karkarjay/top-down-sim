@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,6 +33,16 @@ public class GameManager : MonoBehaviour
    public GameObject aprinsshoespanels;
    public GameObject shopbutton;
    public GameObject chestPopup;
+   public TextMeshProUGUI[] Quantity;
+   public GameObject inventory;
+   public GameObject inventoryButton;
+   public GameObject cap;
+   public GameObject goglesh;
+   public GameObject shoesh;
+   public GameObject clopths;
+   public Color[] color;
+   public GameObject Sellpanel;
+   public GameObject BuyPanel;
    private void Awake()
    {
       if (Instance == null)
@@ -44,10 +55,47 @@ public class GameManager : MonoBehaviour
       }
    }
 
+   public void Start()
+   {
+      for (int i = 0; i < color.Length; i++)
+      {
+         if (PlayerPrefs.GetInt("Cap"+i)==i)
+         {
+            cap.gameObject.GetComponent<Image>().color = color[i]; 
+         }
+            
+      }
+      for (int i = 0; i < color.Length; i++)
+      {
+         if (PlayerPrefs.GetInt("Goglesh"+i)==i)
+         {
+            goglesh.gameObject.GetComponent<Image>().color = color[i]; 
+         }
+            
+      }
+      for (int i = 0; i < color.Length; i++)
+      {
+         if (PlayerPrefs.GetInt("Shoesh"+i)==i)
+         {
+            shoesh.gameObject.GetComponent<Image>().color = color[i]; 
+         }
+            
+      }
+      for (int i = 0; i < color.Length; i++)
+      {
+         if (PlayerPrefs.GetInt("Clothsh"+i,0)==i)
+         {
+            clopths.gameObject.GetComponent<Image>().color = color[i]; 
+         }
+            
+      }
+   }
+
    public void ShopOpen()
    {
       shoppanel.SetActive(true);
       shopbutton.SetActive(false);
+      inventoryButton.SetActive(false);
       chestPopup.SetActive(false);
       
    }
@@ -56,6 +104,7 @@ public class GameManager : MonoBehaviour
    {
       shoppanel.SetActive(false);
       shopbutton.SetActive(true);
+      inventoryButton.SetActive(true);
    }
 
    public void AppriancePanel()
@@ -179,11 +228,38 @@ public class GameManager : MonoBehaviour
       weapsniperpanels.gameObject.SetActive(true);
       
    }
-   
-   
+
+   public void BuyPanelClose()
+   {
+      BuyPanel.gameObject.SetActive(false);
+      PlayerPrefs.DeleteKey("Plush");
+   }
+
+   public void SellpanelClose()
+   {
+      Sellpanel.gameObject.SetActive(false);
+      PlayerPrefs.DeleteKey("Plush");
+   }
    public void CloseChestPopup()
    {
       chestPopup.SetActive(false);
+      
+   }
+
+
+   public void OpenInventory()
+   {
+      for (int i = 0; i < Quantity.Length; i++)
+      {
+         Quantity[i].text = PlayerPrefs.GetInt("item" + i).ToString();
+         
+      }
+      inventory.gameObject.SetActive(true);
+   }
+
+   public void CloseInventory()
+   {
+      inventory.gameObject.SetActive(false);
    }
 
 }

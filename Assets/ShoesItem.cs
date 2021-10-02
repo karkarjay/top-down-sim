@@ -8,7 +8,8 @@ public class ShoesItem : MonoBehaviour
 {
     public Color[] color;
     public GameObject shoesh;
-
+    public GameObject CharShoesh1;
+    public GameObject CharShoesh2;
     public void Awake()
     {
         
@@ -26,7 +27,8 @@ public class ShoesItem : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Shoesh"+Okk,i);
                 shoesh.gameObject.GetComponent<Image>().color = color[i];
-               
+                CharShoesh1.GetComponent<SpriteRenderer>().color = color[i]; 
+                CharShoesh2.GetComponent<SpriteRenderer>().color = color[i];
                 
             }
             

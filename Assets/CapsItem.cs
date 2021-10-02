@@ -8,6 +8,7 @@ public class CapsItem : MonoBehaviour
 {
     public Color[] color;
     public GameObject cap;
+    public GameObject CharCap;
 
     public void Awake()
     {
@@ -26,6 +27,8 @@ public class CapsItem : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Cap"+Okk,i);
                 cap.gameObject.GetComponent<Image>().color = color[i];
+                CharCap.gameObject.GetComponent<SpriteRenderer>().color = color[i]; 
+                
                
                 
             }

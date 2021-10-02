@@ -517,7 +517,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: My Name Is Sam?
+        value: My Name Is Jay.
         type: 0
         typeString: 
       - title: Sequence
@@ -653,8 +653,8 @@ MonoBehaviour:
         y: 411
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 10.309296}
+    canvasZoom: 0.97
   syncInfo:
     syncActors: 0
     syncItems: 0

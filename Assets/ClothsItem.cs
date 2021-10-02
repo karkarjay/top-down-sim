@@ -8,7 +8,7 @@ public class ClothsItem : MonoBehaviour
 {
     public Color[] color;
     public GameObject clopths;
-
+    public GameObject CharCloths;
     public void Awake()
     {
         
@@ -27,7 +27,7 @@ public class ClothsItem : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Clothsh"+Okk,i);
                 clopths.gameObject.GetComponent<Image>().color = color[i];
-
+                CharCloths.GetComponent<SpriteRenderer>().color = color[i];  
             }
             
         }

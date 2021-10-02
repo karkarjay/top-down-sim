@@ -8,7 +8,7 @@ public class GogleshItem : MonoBehaviour
 {
     public Color[] color;
     public GameObject goglesh;
-
+    public GameObject CharGoglesh;
 
     public void Awake()
     {
@@ -27,7 +27,7 @@ public class GogleshItem : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Goglesh"+Okk,i);
                 goglesh.gameObject.GetComponent<Image>().color = color[i];
-                
+                CharGoglesh.GetComponent<SpriteRenderer>().color = color[i]; 
                 
             }
             

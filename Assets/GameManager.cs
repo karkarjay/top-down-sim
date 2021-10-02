@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
    {
       for (int i = 0; i < color.Length; i++)
       {
-         if (PlayerPrefs.GetInt("Cap"+i)==i)
+         if (PlayerPrefs.GetInt("Cap"+i,0)==i)
          {
             cap.gameObject.GetComponent<Image>().color = color[i]; 
          }
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
       }
       for (int i = 0; i < color.Length; i++)
       {
-         if (PlayerPrefs.GetInt("Goglesh"+i)==i)
+         if (PlayerPrefs.GetInt("Goglesh"+i,0)==i)
          {
             goglesh.gameObject.GetComponent<Image>().color = color[i]; 
          }
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
       }
       for (int i = 0; i < color.Length; i++)
       {
-         if (PlayerPrefs.GetInt("Shoesh"+i)==i)
+         if (PlayerPrefs.GetInt("Shoesh"+i,0)==i)
          {
             shoesh.gameObject.GetComponent<Image>().color = color[i]; 
          }
